@@ -56,13 +56,13 @@ artVideos.forEach((video) => {
 
 
 const images = [
-    './Assets/aquafresh.svg',
-    './Assets/calem.svg',
-    './Assets/cocacola.svg',
-    './Assets/macdonalds.svg',
-    './Assets/mpc.svg',
-    './Assets/navigator.svg',
-    './Assets/unilever.svg',
+    './Assignement/Assets/aquafresh.svg',
+    './Assignement/Assets/calem.svg',
+    './Assignement/Assets/cocacola.svg',
+    './Assignement/Assets/macdonalds.svg',
+    './Assignement/Assets/mpc.svg',
+    './Assignement/Assets/navigator.svg',
+    './Assignement/Assets/unilever.svg',
 ];
 
 let currentIndex = 0;
