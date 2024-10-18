@@ -1,0 +1,769 @@
+/* Font and basic styles */
+@font-face {
+    font-family: 'Graphik';
+    src: url('path-to-your-font/Graphik-Regular.woff2') format('woff2'),
+         url('path-to-your-font/Graphik-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Graphik';
+    src: url('path-to-your-font/Graphik-Bold.woff2') format('woff2'),
+         url('path-to-your-font/Graphik-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Graphik', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header styling */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff; /* Adjust background color as needed */
+    padding: 10px 20px; /* Adjust padding for spacing */
+    box-shadow: transparent; /* Optional: adds shadow below the header */
+    position: fixed; /* Fixes the header to the top */
+    top: 0;
+    left: 0;
+    right: 0; /* Makes the header stretch across the width of the page */
+    z-index: 1000;
+}
+
+.left-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.title {
+    font-size: 20px;
+    font-family: 'Graphik', sans-serif;
+    font-weight: 520;
+    font-size: 30px;
+}
+
+/* Center the right container */
+.right-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+}
+.anchor{
+    width:400px !important;
+    margin:34px !important;
+}
+
+.nav-links a {
+    margin: 0 15px;
+    text-decoration: none;
+    font-family: 'Graphik', sans-serif;
+    font-weight: 520;
+    color: #000000;
+    font-size: 30px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Change text completely on hover */
+.nav-links a[data-hover="Work"]:hover::after {
+    content: 'Hard';
+}
+
+.nav-links a[data-hover="Studios"]:hover::after {
+    content: 'Play Harder';
+}
+
+.nav-links a[data-hover="Recognition"]:hover::after {
+    content: 'Yeah!';
+}
+
+/* Original text hidden on hover */
+.nav-links a:hover {
+    color: transparent;
+}
+
+/* Positioning and styling of the replacement text */
+.nav-links a::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #000000;
+    transition: color 0.3s ease;
+}
+
+/* Underline effect */
+.nav-links a:hover::after {
+    text-decoration: underline;
+}
+
+/* Mobile styles */
+.hamburger-menu {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    font-weight: bold;
+    color: #fff;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.close-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.mobile-nav a {
+    display: block;
+    margin: 20px 0;
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Graphik', sans-serif;
+    font-weight: 520;
+    font-size: 30px;
+}
+.intro-section{
+    font-family: 'Graphik', sans-serif ;
+    font-weight: 400;
+    font-size: 50px;
+    position: relative;
+    left:20px;
+}
+
+.intro-section p span {
+    opacity: 0;
+    display: inline-block;
+    animation: wordAppear 0.5s forwards;
+}
+
+/* Keyframes for the word appearing animation */
+@keyframes wordAppear {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Add delay for each word */
+.intro-section p span:nth-child(1) {
+    animation-delay: 0.2s;
+}
+.intro-section p span:nth-child(2) {
+    animation-delay: 0.4s;
+}
+.intro-section p span:nth-child(3) {
+    animation-delay: 0.6s;
+}
+.intro-section p span:nth-child(4) {
+    animation-delay: 0.8s;
+}
+.intro-section p span:nth-child(5) {
+    animation-delay: 1s;
+}
+.intro-section p span:nth-child(6) {
+    animation-delay: 1.2s;
+}
+.intro-section p span:nth-child(7) {
+    animation-delay: 1.4s;
+}
+.intro-section p span:nth-child(8) {
+    animation-delay: 1.6s;
+}
+.intro-section p span:nth-child(9) {
+    animation-delay: 1.8s;
+}
+.intro-section p span:nth-child(10) {
+    animation-delay: 2s;
+}
+.intro-section p span:nth-child(11) {
+    animation-delay: 2.2s;
+}
+.intro-section p span:nth-child(12) {
+    animation-delay: 2.4s;
+}
+.intro-section p span:nth-child(13) {
+    animation-delay: 2.4s;
+}
+.intro-video-container {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.video-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 94px;
+    font-weight: 200;
+    font-family: 'Graphik', sans-serif ;
+    color: #000000;
+    z-index: 100;
+}
+.video-content {
+    width: 100%;
+    height: auto;
+
+
+}
+
+
+.brand-title {
+    font-size: 48px; 
+    position: relative;
+    font-family: 'Graphik', sans-serif ;
+    display: inline-block; 
+}
+
+
+.brand-subtitle {
+    font-size: 64px; 
+    margin: 10px 0;
+    font-family: 'Graphik', sans-serif ;
+
+}
+.brand-meet{
+    font-family: 'Graphik', sans-serif ;
+    font-size: 20px;
+    font-weight:250px;
+    margin:15px 10px;
+}
+
+.branding-container{
+    position: relative !important;
+    left:12px !important;
+}
+
+.video-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh;
+}
+
+.video {
+    position: relative;
+    flex: 1; 
+    overflow: hidden;
+}
+
+
+.video-title {
+    position: absolute;
+    bottom: 40px; /* Position title above the content */
+    left: 10px; /* Adjust for desired positioning */
+    color: #000000; /* Title color */
+    font-family: 'Graphik', sans-serif;
+    font-weight: 500;
+    font-size: 24px; /* Adjust font size as needed */
+    z-index: 1; /* Make sure title is above the video */
+}
+
+.video-content1 {
+    position: absolute;
+    bottom: 10px; /* Position content below the title */
+    left: 10px; /* Adjust for desired positioning */
+    color: #000000; /* Content color */
+    font-family: 'Graphik', sans-serif;
+    font-size: 18px; /* Adjust font size as needed */
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.3s ease; /* Smooth transition for visibility */
+    z-index: 1; /* Make sure content is above the video */
+}
+
+.video:hover .video-content1 {
+    opacity: 1; /* Show content on hover */
+}
+
+
+.video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.video-full{
+    width:80%;
+}
+.video-short{
+    width:20%;
+}
+
+.video:nth-child(1) {
+    height: 80%;
+}
+
+.video:nth-child(2) {
+    height: 100%;
+}
+
+.image-container {
+    display: flex;
+    width: 600px;
+    position:relative;
+    left:20px;
+}
+
+.image-box {
+    flex: 1; /* Equal width for both images */
+    margin: 5px; /* Space between images */
+}
+
+.image {
+    width: 100px; 
+    height: auto;
+    border-radius: 8px; 
+}
+.maintain-container{
+    display: flex;
+}
+.opposite-container{
+    width:50%;
+    margin-left:100px;
+}
+.work{
+    font-family: 'Graphik', sans-serif ;
+    font-size: 57px;
+}
+.branding-container-main {
+    display: flex;
+    flex-direction: column;
+    margin-left:800px;
+  }
+  
+  /* Styling the text */
+  .branding {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .text-heading {
+    font-family: 'Graphik', sans-serif ;
+    font-size: 1.5rem;
+    margin-bottom: 1rem; /* Space between heading and text */
+    width:150px;
+  }
+  
+  .text {
+    margin-bottom: 0.5rem; /* Space between the individual items */
+    font-family: 'Graphik', sans-serif ;
+    font-size: 18px;
+    width:300px;
+  }
+ .learn-more{
+    color:#000000;
+    font-family: 'Graphik', sans-serif ;
+    font-size: 20px;
+ }
+.theme{
+    color:#000000;
+    font-family: 'Graphik', sans-serif ;
+    font-weight: 500;
+    font-size: 50px;
+}
+.theme-container{
+    margin-left:12px;
+}
+
+.art-video-container {
+    position: relative;
+    display: inline-block;
+    width: 100%; /* Adjust as needed */ /* Set a maximum width if necessary */
+}
+
+.header-text1 {
+    position: absolute;
+    top: 70px; /* Adjust as needed */
+    left: 10%;
+    font-family: 'Graphik', sans-serif ;
+    font-size: 25px;
+    transform: translateX(-50%);
+    color: white;
+    text-align: center;
+    margin: 5px 0;
+    z-index: 2;
+}
+.header-text2 {
+    position: absolute;
+    top: 38px;
+    left: 10%;
+    font-family: 'Graphik', sans-serif ;
+    font-size: 25px;
+    transform: translateX(-50%);
+    color: white;
+    text-align: center;
+    margin: 5px 0;
+    z-index: 2;
+}
+.header-text3 {
+    position: absolute;
+    top: 10px; 
+    left:8%;
+    font-family: 'Graphik', sans-serif ;
+    font-size: 25px;
+    transform: translateX(-50%);
+    color: white;
+    text-align: center;
+    margin: 5px 0;
+    z-index: 2;
+}
+.header-text4 {
+    position: absolute;
+    top: 100px; /* Adjust as needed */
+    left: 9%;
+    font-family: 'Graphik', sans-serif ;
+    font-size: 25px;
+    transform: translateX(-50%);
+    color: white;
+    text-align: center;
+    margin: 5px 0;
+    z-index: 2;
+}
+
+.art-video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.center-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2em;
+    text-align: center;
+    z-index: 3; /* Ensure it appears on top of the video */
+    pointer-events: none; /* Prevent interactions with the text */
+}
+
+/* Make sure the video is behind the text */
+.art-video-container video {
+    position: relative;
+    z-index: 1;
+}
+.awards-table {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+/* Header styling */
+.table-header {
+    display: contents;
+    font-weight: bold;
+    color: gray;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+/* Row styling */
+.table-row {
+    display: contents;
+}
+
+/* Cell styling */
+.table-cell {
+    padding: 10px 0;
+    text-align: left;
+    /* Remove border by commenting or deleting the border property */
+    /* border-bottom: 1px solid #ddd; */
+}
+.greeting{
+    font-family: 'Graphik', sans-serif ;
+    font-size: 70px;
+}
+.greeting-container{
+    margin-left: 700px;
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 40px;
+    gap: 40px;
+  }
+  
+  .contact-info {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .location {
+    color: #aaa;
+    font-size: 24px;
+  }
+  
+  .join-us {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    font-weight: bold;
+    font-size: 28px;
+  }
+  
+  .general-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: 24px;
+    color: #aaa;
+  }
+  
+  .social-links p {
+    margin-top: 20px;
+  }
+  .content-overview{
+    font-family: 'Graphik', sans-serif ; 
+    font-size: 65px; 
+  }
+  .heading-overview{
+    font-family: 'Graphik', sans-serif ; 
+    font-size: 25px; 
+  }
+  
+
+
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .mobile-menu.show {
+        display: flex;
+    }
+
+    .right-container {
+        position: static;
+        transform: none;
+    }
+    .video-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 44px;
+        font-weight: 200;
+        font-family: 'Graphik', sans-serif ;
+        color: #fff;
+        z-index: 1;
+    }
+    .brand-title {
+        font-size: 44px;
+        margin-left:12px;
+
+    }
+    .branding-container{
+        position: relative !important;
+        left:12px !important;
+    }
+    
+    .brand-subtitle {
+        font-size: 44px;
+        margin: 10px 0;
+        font-family: 'Graphik', sans-serif ;
+    }
+    
+    .brand-meet {
+        font-size: 18px;
+        margin:15px 10px;
+        font-family: 'Graphik', sans-serif ;
+
+    }
+    .video-container {
+        flex-direction: column;
+    }
+    .video{
+        height: auto;
+        margin-top:2px;
+    }
+    
+.video-title {
+    position: absolute;
+    bottom: 10px; /* Position title above the content */
+    left: 10px; /* Adjust for desired positioning */
+    color: #000000; /* Title color */
+    font-family: 'Graphik', sans-serif;
+    font-weight: 500;
+    font-size: 24px; /* Adjust font size as needed */
+    z-index: 1; /* Make sure title is above the video */
+}
+
+.video-content1 {
+    position: absolute;
+    bottom: -15px; /* Position content below the title */
+    left: 10px; /* Adjust for desired positioning */
+    color: #000000; /* Content color */
+    font-family: 'Graphik', sans-serif;
+    font-size: 18px; /* Adjust font size as needed */
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.3s ease; /* Smooth transition for visibility */
+    z-index: 1; /* Make sure content is above the video */
+}
+.image-container {
+    margin-left: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; /* Stack images vertically on small screens */
+}
+.maintain-container{
+    display: flex;
+    flex-direction: column;
+}
+.work{
+    font-family: 'Graphik', sans-serif ;
+    font-size: 37px;
+}
+.branding-container-main {
+    flex-direction: column;
+    margin-left: 0px;
+    
+  }
+  .branding {
+    flex: 1 1 45%;
+    display: flex;
+
+  }
+    
+  .text {
+    margin-bottom: 0.5rem; /* Space between the individual items */
+    font-family: 'Graphik', sans-serif ;
+    font-size: 18px;
+  }
+
+  .branding {
+    margin-bottom: 2rem;
+    display:flex;
+    margin-left:20px;
+    flex-direction:column ;
+    justify-content: space-around; /* Add space between sections */
+  }
+
+  .text-heading {
+    margin-bottom: 0; /* Remove space between heading and text */
+  }
+
+  .video-full{
+    width:100%;
+}
+.video-short{
+    width:100%;
+}
+.art-video{
+    width:100%;
+    z-index: -1;
+}
+.awards-table {
+    grid-template-columns: 1fr 1fr;
+}
+
+.header-cell:nth-child(3), .header-cell:nth-child(4),
+.table-cell:nth-child(3), .table-cell:nth-child(4) {
+    display: none;
+}
+.container {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .join-us {
+    align-items: center;
+    margin: 20px 0;
+  }
+
+  .general-info {
+    align-items: center;
+    margin: 20px 0;
+  }
+
+  .location, .general-info, .join-us {
+    font-size: 16px;
+  }
+
+  .social-links p {
+    text-align: center;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+    gap: 20px;
+  }
+
+  .location {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .join-us {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  .general-info, .social-links p {
+    font-size: 12px;
+    margin-top: 10px;
+  }
+  .content-overview{
+    font-family: 'Graphik', sans-serif ; 
+    font-size: 45px; 
+  }
+
+}
